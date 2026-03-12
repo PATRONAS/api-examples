@@ -1,0 +1,26 @@
+meta {
+  name: Update Swap Notional
+  type: http
+  seq: 7
+}
+
+patch {
+  url: {{url}}/opus/api/v3/masterdata/swaps/4d743016-66a1-4759-a95e-ca704cb93b1d
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "nominal": {
+      "quantity": 20000000,
+      "unit": "EUR",
+      "type": "MONEY"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

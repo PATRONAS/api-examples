@@ -1,0 +1,30 @@
+meta {
+  name: Create Quote (MtM) for a Swap
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{url}}/opus/api/v3/masterdata/swaps/4d743016-66a1-4759-a95e-ca704cb93b1d/asset-at-marketplaces/home/quotes
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "closingQuoteOfDay": false,
+    "lastQuoteOfDay": false,
+    "time": "2025-12-02T14:36:08.308Z",
+    "timeZone": "Europe/Berlin",
+    "value": {
+      "quantity": 210000,
+      "unit": "EUR/Pieces",
+      "type": "PRICE_PER_PIECE"
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

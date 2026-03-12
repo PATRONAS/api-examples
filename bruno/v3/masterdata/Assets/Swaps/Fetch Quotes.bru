@@ -1,0 +1,16 @@
+meta {
+  name: Fetch Quotes from a Swap
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{url}}/opus/api/v3/masterdata/swaps/4d743016-66a1-4759-a95e-ca704cb93b1d/asset-at-marketplaces/home/quotes
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
